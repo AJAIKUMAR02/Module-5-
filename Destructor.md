@@ -22,18 +22,21 @@ The program defines a class `Demo` with:
    - Delete the object using the `del` keyword.
 ## Program
 ```
+
 class Demo:
+   
     def __init__(self):
-        self.status="Alive"
+        self.status = "Alive"
         print(self.status)
     def __del__(self):
-        print("Object is being destroyed")
-obj=Demo()
+        print("The object no longer exists")
+
+
+obj = Demo()  
 del obj
-```
+```      
 ## 🧪 Output
-<img width="423" height="198" alt="image" src="https://github.com/user-attachments/assets/f25d5e81-8bd1-444a-a287-239cfbdb0a14" />
+![WhatsApp Image 2025-12-26 at 8 20 36 PM](https://github.com/user-attachments/assets/c36949ff-78e9-4802-9698-0e5abd3c7630)
 
 ## Result
-Thus the program to demonstrate constructor and destructor has been executed successfully.
-The object is created and destroyed with corresponding messages displayed.
+Thus , the program has been executed successfully.
