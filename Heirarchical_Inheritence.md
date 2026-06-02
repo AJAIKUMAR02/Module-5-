@@ -32,45 +32,67 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 
 ## Program
 ```
+
 class Details:
-    def __init__(self,name,age):
-        self.name=name
-        self.age=age
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
     def getName(self):
         return self.name
+
     def getAge(self):
         return self.age
+
+
 class Employee(Details):
-    def __init__(self,name,age,employee_id,department):
-        super().__init__(name,age)
-        self.employee_id=employee_id
-        self.department=department
+    def __init__(self, name, age, employee_id, department):
+        super().__init__(name, age)
+        self.employee_id = employee_id
+        self.department = department
+
     def getEmployeeDetails(self):
-        print(self.name,self.age,self.employee_id,self.department)
+        return (
+            f"Employee Name: {self.getName()}, "
+            f"Age: {self.getAge()}, "
+            f"Employee ID: {self.employee_id}, "
+            f"Department: {self.department}"
+        )
+
+
+# Derived Class 2
 class Patient(Details):
-    def __init__(self,name,age,patient_id,disease):
-        super().__init__(name,age)
-        self.patient_id=patient_id
-        self.disease=disease
+    def __init__(self, name, age, patient_id, disease):
+        super().__init__(name, age)
+        self.patient_id = patient_id
+        self.disease = disease
+
     def getPatientDetails(self):
-        print(self.name,self.age,self.patient_id,self.disease)
-ename=input()
-eage=int(input())
-eid=input()
-dept=input()
-pname=input()
-page=int(input())
-pid=input()
+        return (
+            f"Patient Name: {self.getName()}, "
+            f"Age: {self.getAge()}, "
+            f"Patient ID: {self.patient_id}, "
+            f"Disease: {self.disease}"
+        )
+
+
+name=input()
+age=int(input())
+employee_id=int(input())
+department=input()
+employee = Employee(name,age,employee_id,department)
+name=input()
+age=int(input())
+patient_id=int(input())
 disease=input()
-e=Employee(ename,eage,eid,dept)
-p=Patient(pname,page,pid,disease)
-e.getEmployeeDetails()
-p.getPatientDetails()
+patient = Patient(name,age,patient_id,disease)
+
+
+print(employee.getEmployeeDetails())
+print(patient.getPatientDetails())
 ```
-
 ## Sample Output
-<img width="414" height="413" alt="image" src="https://github.com/user-attachments/assets/d1c901df-0c09-4f0e-bd11-968bec9b93e8" />
+![WhatsApp Image 2025-12-26 at 8 24 00 PM](https://github.com/user-attachments/assets/38ec113a-d086-4ab1-a29c-5781a8603115)
 
-## Result
-Thus the program demonstrating inheritance using base and derived classes has been executed successfully.
-The employee and patient details are accepted and displayed.
+## RESULT
+Thus , the program has been executed successfully.
